@@ -14,3 +14,12 @@
 <button (click)="propiedades.danger = !propiedades.danger" type="button" class="btn btn-danger" [ngClass]="{ 'btn-danger': propiedades.danger, 'btn-info':!propiedades.danger }">
     Cambiar
 </button>
+
+<br><br>
+
+<h3>Proceso asincrono</h3>
+
+<button (click)="ejecutar" class="btn btn-primary" type="button">
+    <i [ngClass]="{ 'fa-save':!loading, 'fa-refresh fa-spin':loading }" class="fa"></i>
+    Guardar cambios
+</button>
