@@ -19,7 +19,8 @@
 
 <h3>Proceso asincrono</h3>
 
-<button (click)="ejecutar" class="btn btn-primary" type="button">
-    <i [ngClass]="{ 'fa-save':!loading, 'fa-refresh fa-spin':loading }" class="fa"></i>
-    Guardar cambios
+<button (click)="ejecutar()" class="btn btn-primary" type="button" [disabled]="loading">
+    <i [ngClass]="{ 'fa-save':!loading, 'fa-refresh fa-spin':loading }" class="fa"> </i>
+    <span *ngIf="!loading"> Guardar cambios</span>
+    <span *ngIf="loading"> Espere por favor...</span >
 </button>
